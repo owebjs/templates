@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 
 /**
- * 
+ *
  * @param {string} message
  */
 export const success = (message) => {
@@ -9,7 +9,7 @@ export const success = (message) => {
 };
 
 /**
- * 
+ *
  * @param {string} message
  */
 export const info = (message) => {
@@ -17,7 +17,7 @@ export const info = (message) => {
 };
 
 /**
- * 
+ *
  * @param {string} message
  */
 export const warn = (message) => {
@@ -25,7 +25,7 @@ export const warn = (message) => {
 };
 
 /**
- * 
+ *
  * @param {string} message
  */
 export const error = (message) => {

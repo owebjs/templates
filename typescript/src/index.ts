@@ -1,7 +1,8 @@
 import Oweb from 'owebjs';
 import RapidEnv from 'rapidenv';
-import { info } from '@/utils/logger';
 {{imports}}
+
+import { info } from '@/utils/logger';
 
 RapidEnv().load();
 
@@ -11,7 +12,7 @@ async function main() {
         uWebSocketsEnabled: {{uWebSocketsEnabled}},
     }).setup();
 
-    {{fastifyPlugins}}
+{{fastifyPlugins}}
 
     await oweb.loadRoutes({ directory: 'dist/routes' });
     const { address } = await oweb.start({ host: process.env.HOST, port: +process.env.PORT });

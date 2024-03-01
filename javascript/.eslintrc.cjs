@@ -9,6 +9,7 @@ module.exports = {
         sourceType: 'module',
     },
     extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+    plugins: ['simple-import-sort'],
     rules: {
         'no-console': 'off',
         'no-prototype-builtins': 'off',
@@ -23,6 +24,33 @@ module.exports = {
         'no-control-regex': 'off',
         'no-empty-character-class': 'off',
         'prefer-rest-params': 'off',
+
+        'simple-import-sort/imports': [
+            'error',
+            {
+                groups: [
+                    // Side effect imports.
+                    ['^\\u0000'],
+
+                    // Node.js builtins prefixed with `node:`.
+                    ['^node:'],
+
+                    // Packages.
+                    ['^\\w'],
+
+                    // Packages prefixed with `@`.
+                    ['^@\\w'],
+
+                    // Custom paths prefixed with `@/`.
+                    ['^@/'],
+
+                    // Relative imports.
+                    ['^\\.'],
+                ],
+            },
+        ],
+        'simple-import-sort/exports': 'error',
+
         'prettier/prettier': [
             'error',
             {

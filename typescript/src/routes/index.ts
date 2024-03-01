@@ -1,4 +1,4 @@
-import { Route, type FastifyRequest, type FastifyReply } from 'owebjs';
+import { type FastifyReply, type FastifyRequest, Route } from 'owebjs';
 
 export default class MainRoute extends Route {
     handle(_: FastifyRequest, res: FastifyReply) {

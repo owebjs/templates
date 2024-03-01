@@ -1,5 +1,6 @@
 import Oweb from 'owebjs';
 import RapidEnv from 'rapidenv';
+
 {{imports}}
 
 import { info } from '@/utils/logger';
